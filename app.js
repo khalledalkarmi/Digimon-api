@@ -101,8 +101,10 @@ async function getAllData() {
     let dataAsJson = response.json();
     return dataAsJson;
 }
+
 let digimonArray = []
 getAllData().then((data) => {
+    
     for (let index = 0; index < 20; index++) {
         const element = data[index];
         let digimon = new Digimon(data.name, data.level, data.img);
