@@ -61,7 +61,7 @@ function display(data) {
 
     // create div container and set class name 
     let divCol = document.createElement("div");
-    divCol.className = "col-sm-3";
+    divCol.className = "col-sm-3 mt-3";
     cardDiv.append(divCol);
 
     // create div container to carry card-title, card-image, card-body, and card-text 
@@ -107,7 +107,7 @@ getAllData().then((data) => {
     
     for (let index = 0; index < 20; index++) {
         const element = data[index];
-        let digimon = new Digimon(data.name, data.level, data.img);
+        let digimon = new Digimon(element.name, element.level, element.img);
         digimonArray.push(digimon);
         display(element);
     }
